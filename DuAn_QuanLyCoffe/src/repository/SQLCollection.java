@@ -5,7 +5,7 @@
 package repository;
 
 import java.sql.*;
-public class SQLConllection {
+public class SQLCollection {
    static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
    static String url = "jdbc:sqlserver://127.0.0.1:1433;databaseName=UPCOFFEE";
    static String user ="sa";// đây là tài khoản, ở đây mình sẽ đổi thành admin
@@ -41,13 +41,13 @@ public class SQLConllection {
     }
 
     public static ResultSet query(String sql, Object... args) throws Exception {
-        PreparedStatement stmt = SQLConllection.getStmt(sql, args);
+        PreparedStatement stmt = SQLCollection.getStmt(sql, args);
         return stmt.executeQuery();//trả về rs "preparestatement có thể chạy executeQuery"
     }
 
     public static Object value(String sql, Object... args) {//trả về Mã mỗi bảng
         try {
-            ResultSet rs = SQLConllection.query(sql, args);
+            ResultSet rs = SQLCollection.query(sql, args);
             if (rs.next()) {
                 return rs.getObject(0);
             }//nếu có dữ liệu sẽ không đóng rs nếu đóng không trả đc rs
@@ -60,7 +60,7 @@ public class SQLConllection {
 
     public static int update(String sql, Object... args) {
         try {
-            PreparedStatement stmt = SQLConllection.getStmt(sql, args);
+            PreparedStatement stmt = SQLCollection.getStmt(sql, args);
             try {
                 return stmt.executeUpdate();
             } finally {
