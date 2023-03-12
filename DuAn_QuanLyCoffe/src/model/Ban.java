@@ -53,10 +53,10 @@ public class Ban {
         this.soluongcho = soluongcho;
     }
 
- 
     @Override
     public String toString() {
-        return "Bàn:"+ idBan + " ("+soluongcho+")";
+        return "Ban{" + "idBan=" + idBan + ", trangThai=" + trangThai + ", hoatDong=" + hoatDong + ", soluongcho=" + soluongcho + '}';
     }
+
     
 }

@@ -55,13 +55,11 @@ public class DonViSanPham {
     public void setThemTien(int ThemTien) {
         this.ThemTien = ThemTien;
     }
-    
-    @Override
-    public String toString(){
-        return TenDonvi;
-    }
 
-    public String getThemTien(String selectByName) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public String toString() {
+        return "DonViSanPham{" + "ID_DonviSP=" + ID_DonviSP + ", TenDonvi=" + TenDonvi + ", Kichthuoc=" + Kichthuoc + ", ThemTien=" + ThemTien + '}';
     }
+    
+
 }

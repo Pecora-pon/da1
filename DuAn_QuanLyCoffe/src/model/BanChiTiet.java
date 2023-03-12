@@ -16,7 +16,7 @@ public class BanChiTiet {
     private int ID_Ban;
     private Date thoidiemCoNguoi;
     private boolean banChinh;
-    
+
     public BanChiTiet() {
     }
 
@@ -26,8 +26,6 @@ public class BanChiTiet {
         this.thoidiemCoNguoi = thoidiemCoNguoi;
         this.banChinh = banChinh;
     }
-
-    
 
     public int getID_HoaDon() {
         return ID_HoaDon;
@@ -60,6 +58,12 @@ public class BanChiTiet {
     public void setBanChinh(boolean banChinh) {
         this.banChinh = banChinh;
     }
+
+    @Override
+    public String toString() {
+        return "BanChiTiet{" + "ID_HoaDon=" + ID_HoaDon + ", ID_Ban=" + ID_Ban + ", thoidiemCoNguoi=" + thoidiemCoNguoi + ", banChinh=" + banChinh + '}';
+    }
+    
     
     
 }
