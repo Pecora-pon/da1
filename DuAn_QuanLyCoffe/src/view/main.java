@@ -11,6 +11,7 @@ public class main extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setExtendedState(this.MAXIMIZED_BOTH);
+        showPanel(new QuanLyBanHang());
     }
 
     @SuppressWarnings("unchecked")
